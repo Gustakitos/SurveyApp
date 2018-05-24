@@ -22,10 +22,8 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 
-const PORT = null;
-
 if(process.env.NODE_ENV === 'production'){
-   PORT = process.env.PORT;
+   const PORT = process.env.PORT;
    app.listen(PORT);
 }else{
     const port = 5000;
